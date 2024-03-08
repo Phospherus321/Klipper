@@ -86,6 +86,7 @@ class Heater:
             self.smoothed_temp += temp_diff * adj_time
             self.can_extrude = (self.smoothed_temp >= self.min_extrude_temp)
         #logging.debug("temp: %.3f %f = %f", read_time, temp)
+        logging.warning(locals().__str__())
     # External commands
     def get_pwm_delay(self):
         return self.pwm_delay
